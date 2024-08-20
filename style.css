@@ -1,0 +1,476 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(130deg,rgb(16, 78, 170),rgb(12, 108, 187),rgb(3, 63, 131),rgb(1, 19, 99),
+    rgb(16, 78, 170),rgb(12, 108, 187),rgb(3, 63, 131),rgb(1, 19, 99));
+    background-size: 400% 400%;
+    animation: cambiar 300s ease-in infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/*Contenedor general*/
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 1000px;
+    background: #fff;
+    margin: 30px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0,0,0,0.1);
+}
+
+/*Contenedor izquierdo*/
+.container .left_side {
+    position: relative;
+    background: rgb(75, 74, 74);
+    padding: 40px;
+}
+
+/*Sector de la foto y alrededor*/
+.profiletext {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+    cursor:default;
+}
+.profiletext .imgbx {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profiletext .imgbx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profiletext h2 {
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+
+.profiletext h2 span {
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+/*Abarca casi toda la seccion de contacto, educacion y idiomas*/
+.contactinfo {
+    padding-top: 40px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+    padding-bottom: 25px;
+}
+
+
+/*Sector Contactos */
+.main__socials {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+  }
+  
+  .Link__instagram {
+    padding: 0.8em;
+    outline: none;
+    border: none;
+    background: rgb(75, 74, 74);
+    box-shadow: rgba(213, 115, 238, 0.925) 0px 3px 10px 1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .instagram {
+    fill: #cc39a4;
+  }
+  
+  .Link__twitter {
+    padding: 0.8em;
+    outline: none;
+    border: none;
+    background: rgb(75, 74, 74);
+    box-shadow: rgba(83, 152, 255, 0.925) 0px 3px 10px 1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .twitter {
+    fill: #03a9f4;
+  }
+  
+  .Link__github {
+    padding: 0.8em;
+    outline: none;
+    border: none;
+    background: rgb(75, 74, 74);
+    box-shadow: rgba(255, 255, 255, 0.925) 0px 3px 10px 1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .Link__gmail {
+    padding: 0.8em;
+    outline: none;
+    border: none;
+    background: rgb(75, 74, 74);
+    box-shadow: rgba(255, 185, 119, 0.925) 0px 3px 10px 1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .gmail {
+    fill: #ff815b;
+  }
+  
+  .Link__instagram:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #cc39a4;
+  }
+  
+  .Link__instagram:hover .instagram {
+    fill: white;
+  }
+  
+  .Link__twitter:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #03a9f4;
+  }
+  
+  .Link__twitter:hover .twitter {
+    fill: white;
+  }
+  
+  .Link__github:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: black;
+  }
+  
+  .Link__github:hover .github {
+    fill: white;
+  }
+  
+  .Link__gmail:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #ff693b;
+  }
+  
+  .Link__gmail:hover .gmail {
+    fill: white;
+}
+  
+.title {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    cursor:default;
+}
+
+.contactinfo ul {
+    position: relative;
+}
+.contactinfo ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor:default;
+}
+.contactinfo ul li span {
+    color: #fff;
+    font-weight: 300;
+}
+
+.contactinfo.education li{
+    margin-bottom: 15px;
+}
+
+.contactinfo.education h5 {
+    color: #03a9f4;
+    font-weight: 500;
+}
+.contactinfo.education h4:nth-child(2) {
+    color: #fff;
+    font-weight: 500;
+}
+.contactinfo.education h4 {
+    color: #fff;
+    font-weight: 300;
+}
+
+.contactinfo.language .percent {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: rgb(29, 28, 28);
+    display: block;
+    margin-top: 5px;
+}
+.contactinfo.language .percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background:rgb(1, 191, 248);
+}
+.contactinfo.language i {
+    color: rgb(1, 191, 248);
+    padding: 5px;
+}
+
+.contactinfo.language .percent p{
+    text-align: center;
+    padding: 10px;
+}
+
+/*Contenedor derecho*/
+.container .rigth_side {
+    position: relative;
+    background: linear-gradient(to right,rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
+    padding: 40px;
+}
+
+/*Abarca todos los sectores de lado derecho*/
+.about {
+    margin-bottom: 50px;
+    
+}
+.about:last-child {
+    margin-bottom: 0;
+}
+.title2 {
+    color: rgb(0, 36, 114);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    cursor:default;
+}
+p {
+    color: black;
+}
+#parr{
+    font-size: 18px;
+}
+
+
+/*Boton de Github en proyectos*/
+.Btn {
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .4s;
+    cursor: pointer;
+    position: relative;
+    background-color: rgb(31, 31, 31);
+    overflow: hidden;
+    margin-top: 8px;
+  }
+  
+  .svgIcon {
+    transition-duration: .3s;
+  }
+  
+  .svgIcon path {
+    fill: white;
+  }
+  
+  .text1 {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    width: 120px;
+    font-weight: 600;
+    opacity: 0;
+    transition-duration: .4s;
+  }
+  
+  .Btn:hover {
+    width: 110px;
+    transition-duration: .4s;
+    border-radius: 30px;
+  }
+  
+  .Btn:hover .text1 {
+    opacity: 1;
+    transition-duration: .4s;
+  }
+  
+  .Btn:hover .svgIcon {
+    opacity: 0;
+    transition-duration: .3s;
+}
+
+
+.about .box {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+    cursor:default;
+}
+.about .box .borde {
+    display: flex;
+    margin: 10px 0;
+    cursor:default;
+    transition: transform 0.3s ease, border 0.2s ease, padding 0.2s ease;
+}
+.about .box .borde:hover {
+    transform: scale(1.1);
+    border: 1px solid #003c8a;
+    padding: 8px;
+}
+.about .box .borde i {
+    height: 50px;
+    width: 50px;
+}
+
+.about .box .experience {
+    min-width: 150px;
+}
+
+.about .box .experience h5 {
+    text-transform: uppercase;
+    color: rgb(53, 53, 53);
+    font-weight: 600;
+}
+.about .box .text h4{
+    text-transform: uppercase;
+    color: rgb(0, 36, 114);
+    font-size: 16px;
+}
+.about .box .text a {
+    color: rgb(0, 36, 114);
+    text-decoration: none;
+    cursor: pointer;
+}
+    
+/*Habilidades*/
+.skills .box {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills .box h4 {
+    text-transform: uppercase;
+    color: rgb(53, 53, 53);
+    font-weight: 500;
+}
+
+.skills .box .percent {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: rgb(218, 218, 218);
+    border-radius: 40px;
+    transition: background 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+.skills .box .percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+    border-radius: 40px;
+    transition: background 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+.skills .box .percent p {
+    text-align: center;
+    padding-top: 12px;
+    color: rgb(75, 74, 74);
+}
+
+/* Invertir colores al pasar el cursor por encima */
+.skills .box .percent:hover {
+    background: #03a8f4b2; 
+}
+
+.skills .box .percent:hover div {
+    background: rgb(78, 78, 78); 
+}
+
+/*Interes Personal*/
+.interest ul {
+    cursor:default;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.interest ul li {
+    list-style: none;
+    color: rgb(44, 44, 44);
+    font-weight: 500;
+    margin: 10px 0;
+}
+.interest ul li .fa {
+    color: #003c8a;
+    font-size: 20px;
+    padding: 8px;
+}
+.interest ul li a {
+    text-decoration: none;
+    color: rgb(44, 44, 44);
+}
+
+
+
+@media (max-width: 1000px) {
+    .container{
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .interest ul {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width: 600px) {
+    .about .box {
+        flex-direction: column;
+    }
+    .about .box .experience {
+        margin-bottom: 5px;
+    }
+    .interest ul {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .skills .box {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@keyframes cambiar{
+    0%{background-position: 0% 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 50% 100%;}
+}
